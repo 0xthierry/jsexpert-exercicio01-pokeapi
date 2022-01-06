@@ -31,7 +31,7 @@ describe("Team Controller Test Suite", () => {
     sandbox
       .stub(
         teamController.teamService,
-        teamController.teamService.getRandomTeams.name
+        teamController.teamService.getRandomTeam.name
       )
       .resolves([pokemon, pokemon, pokemon]);
 

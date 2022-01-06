@@ -63,7 +63,7 @@ describe("Team Service Test Suite", () => {
       .stub(teamService, teamService.getRandomPokemon.name)
       .resolves(pokemon);
 
-    const result = await teamService.getRandomTeams();
+    const result = await teamService.getRandomTeam();
     const expected = [pokemon, pokemon, pokemon];
 
     expect(teamService.getRandomPokemon.calledThrice).to.be.ok;

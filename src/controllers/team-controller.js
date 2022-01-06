@@ -6,7 +6,7 @@ class TeamController {
   }
 
   async index() {
-    const result = await this.teamService.getRandomTeams();
+    const result = await this.teamService.getRandomTeam();
     return {
       body: result,
       statusCode: 200,

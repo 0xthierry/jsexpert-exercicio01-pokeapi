@@ -1,7 +1,7 @@
 const Pokemon = require("../entities/Pokemon");
 const Random = require("../lib/random");
 const PokemonRepository = require("../repositories/pokemon-repository");
-const TOTAL_TEAMS = 3;
+const TOTAL_OF_POKEMONS_PER_TEAM = 3;
 
 class TeamService {
   constructor() {
@@ -20,10 +20,10 @@ class TeamService {
     });
   }
 
-  async getRandomTeams() {
+  async getRandomTeam() {
     const count = await this.pokemonRepository.count();
     const pokemons = await Promise.all(
-      Array.from({ length: TOTAL_TEAMS }).map(() =>
+      Array.from({ length: TOTAL_OF_POKEMONS_PER_TEAM }).map(() =>
         this.getRandomPokemon({ min: 1, max: count })
       )
     );
