@@ -18,16 +18,33 @@ Deve retornar um array com 3 pokemóns aleatórios, contendo seus respectivos `n
 
 ### Testes
 
-* [ ] mocks
-* [ ] stubs
-* [ ] spies
-* [ ] testes end-2-end
-* [ ] testes unitários
-* [ ] 100% de code coverage
+* [x] mocks
+* [x] stubs
+* [x] spies
+* [x] testes end-2-end
+* [x] testes unitários
+* [x] 100% de code coverage
 
 ### Extras
 
-* [ ] TDD e BDD, será que rola? Acho que vale a tentativa!
+* [x] TDD e BDD, será que rola? Acho que vale a tentativa!
+
+## Como executar
+
+### Iniciar API
+```bash
+npm start
+```
+
+### Rodar os testes
+```bash
+npm test
+```
+
+### Obter o coverage
+```bash
+npm run test:cov
+```
 
 ## Dicas
 
