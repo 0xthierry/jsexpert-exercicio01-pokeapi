@@ -6,7 +6,7 @@ const teamControllerInstace = new TeamController()
 const docsControllerInstace = new DocsController()
 
 const handlerWrapper = (execute) => async (request, response) => {
-  const { body, statusCode = 200 } = await execute();
+  const { body, statusCode } = await execute();
   response.write(JSON.stringify(body));
   response.statusCode = statusCode;
   return response.end();

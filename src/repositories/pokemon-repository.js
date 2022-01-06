@@ -1,5 +1,7 @@
 const Request = require("../lib/request");
-const PROBLEMATIC_IDS_START = 898;
+const NON_EXISTING_IDS_START = 898;
+const SKIP_NON_IDS = 103;
+
 class PokemonRepository {
   constructor() {
     this.pokeapiClient = new Request({ baseURL: "https://pokeapi.co/api/v2" });
@@ -7,7 +9,7 @@ class PokemonRepository {
 
   async findById(id) {
     const correctId =
-      id > PROBLEMATIC_IDS_START ? id - PROBLEMATIC_IDS_START : id;
+      id > NON_EXISTING_IDS_START ? id - SKIP_NON_IDS : id;
     const { data } = await this.pokeapiClient.get(`/pokemon/${correctId}`);
     return data;
   }
